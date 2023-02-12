@@ -23,12 +23,30 @@ export class Login extends React.Component {
         })
     }
 
+    // onLogin = (event) => {
+    //     const click = document.target.type
+    //     this.setState((onInputChange, onChecked) => {
+    //         click = onInputChange(onChecked)
+    //         console.log(event)
+    //     })
+    // }
+
+    reset = (event) => {
+        this.setState({
+            username: "",
+            password: "",
+            remember: false
+        })
+    }
+
     render() {
         return (
             <div>
                 <input name="username" value={this.state.username} onChange={this.onInputChange} />
                 <input name="password" type="password" value={this.state.password} onChange={this.onInputChange} />
                 <input name="remember" type="checkbox" checked={this.state.remember} onChange={this.onChecked}/>
+                <button onClick={this.onLogin}>Login</button>
+                <button onClick={this.reset}>Reset</button>
             </div>
         )
     }
