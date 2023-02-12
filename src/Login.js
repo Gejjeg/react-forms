@@ -24,14 +24,14 @@ export class Login extends React.Component {
     }
 
     // onLogin = (event) => {
-    //     const click = document.target.type
+    //     const click = event.target.type
     //     this.setState((onInputChange, onChecked) => {
-    //         click = onInputChange(onChecked)
+    //         click = (onInputChange, onChecked)
     //         console.log(event)
     //     })
     // }
 
-    reset = (event) => {
+    reset = () => {
         this.setState({
             username: "",
             password: "",
